@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Угадай число!</h1>
+
+        <div class="range-inputs">
+            <label>
+                Минимум:
+                <input type="number" id="min" value="1" min="1">
+            </label>
+            <label>
+                Максимум:
+                <input type="number" id="max" value="100" min="2">
+            </label>
+        </div>
+
+        <button onclick="setRange()">Установить диапазон</button>
+
+        <div class="game">
+            <p>Загадано число от <span id="range-min">1</span> до <span id="range-max">100</span></p>
+
+            <input type="number" id="guess" placeholder="Введи число">
+            <button onclick="checkGuess()">Проверить</button>
+
+            <div id="message"></div>
+            <div>Попыток: <span id="attempts">0</span></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
